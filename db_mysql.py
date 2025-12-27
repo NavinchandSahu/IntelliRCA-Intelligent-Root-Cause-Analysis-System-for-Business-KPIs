@@ -8,7 +8,7 @@ from datetime import datetime
 DB_CONFIG = {
     "host": "localhost",
     "user": "root",
-    "password": "navin/25",
+    "password": "password",
     "database": "rca_system"
 }
 
@@ -63,4 +63,5 @@ def fetch_upload_history():
     cursor.close()
     conn.close()
     return data
+
 
