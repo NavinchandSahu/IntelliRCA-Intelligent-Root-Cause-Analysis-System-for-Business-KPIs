@@ -1,6 +1,5 @@
 # db_mysql.py
 # MySQL helper for RCA Project
-# Author: Navinchand Sahu
 
 import mysql.connector
 from datetime import datetime
@@ -63,5 +62,6 @@ def fetch_upload_history():
     cursor.close()
     conn.close()
     return data
+
 
 
