@@ -1,6 +1,5 @@
 # app.py
 # Intelligent Root Cause Analysis System
-# Author: Navinchand Sahu
 
 import streamlit as st
 import pandas as pd
@@ -14,7 +13,7 @@ from db_mysql import fetch_upload_history, save_upload
 st.set_page_config(page_title="Intelligent RCA System", layout="wide")
 
 # =========================
-# AXIS FONT SIZE (FIXED = 10)
+# AXIS FONT SIZE 
 # =========================
 def style_axis(ax):
     ax.tick_params(axis="x", labelsize=5)
@@ -174,11 +173,10 @@ def run_analysis(df):
         st.dataframe(df[df["Anomaly"] == -1])
 
     # =========================
-    # BUSINESS INSIGHTS (EXTENDED – KEEP + ADD)
+    # BUSINESS INSIGHTS 
     # =========================
     st.subheader("💡 Business Insights")
 
-    # ---------- EXISTING INSIGHTS (KEEP AS IS) ----------
     loss_ratio = (df["Profit"] < 0).mean()
 
     if loss_ratio > 0.4:
@@ -193,7 +191,6 @@ def run_analysis(df):
         st.info(f"📈 Strongest Profit Driver: {corr.idxmax()}")
         st.info(f"📉 Strongest Loss Driver: {corr.idxmin()}")
 
-    # ---------- NEW INSIGHTS (ADDED, NO CONFLICT) ----------
     if "Product" in df.columns:
 
         # Determine popularity metric
@@ -381,7 +378,7 @@ def run_analysis(df):
                 )
 
 # =========================
-# 🔥 LOAD FROM HISTORY LINK (FIX)
+# 🔥 LOAD FROM HISTORY LINK 
 # =========================
 query = st.query_params.get("file")
 
@@ -419,7 +416,9 @@ if menu == "🏠 Home":
 
     👉 Use the navigation bar above.
     """)
-
+# =========================
+# Description
+# =========================
 elif menu == "📘 Description":
     st.markdown(
         """
@@ -440,7 +439,9 @@ elif menu == "📘 Description":
         """,
         unsafe_allow_html=True
     )
-
+# =========================
+# Upload Dataset
+# =========================
 elif menu == "📤 Upload Dataset":
     file = st.file_uploader("Upload Dataset", type=["csv", "xlsx"])
     if file:
@@ -454,7 +455,7 @@ elif menu == "📤 Upload Dataset":
 
 
 # =========================
-# HISTORY (COLUMN VIEW)
+# HISTORY
 # =========================
 elif menu == "🕒 History":
     st.title("🕒 Upload History")
@@ -478,4 +479,5 @@ elif menu == "🕒 History":
             c1.write(h["file_name"])
             c2.write(h["upload_date"])
             c3.write(str(h["upload_time"])[:8])
+
             c4.markdown(f"[Open Analysis](/?file={file})")
