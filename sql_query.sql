@@ -8,5 +8,5 @@ CREATE TABLE IF NOT EXISTS upload_history (
 );
 ALTER TABLE upload_history
 ADD COLUMN upload_time TIME AFTER upload_date;
-DROP DATABASE IF EXISTS rca_system;
+
 
