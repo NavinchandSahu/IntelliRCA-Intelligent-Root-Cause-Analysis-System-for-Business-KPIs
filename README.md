@@ -56,26 +56,20 @@ IntelliRCA allows businesses to transform raw operational and financial data int
 3. Install dependencies:
 
    ```bash
-Core data analysis & ML libraries
-pip install pandas numpy matplotlib seaborn scikit-learn
+   Core data analysis & ML libraries
+   pip install pandas numpy matplotlib seaborn scikit-learn
 
-MySQL database connection
-pip install mysql-connector-python
+   MySQL database connection
+   pip install mysql-connector-python
 
-Web app / dashboard
-pip install streamlit
+   Web app / dashboard
+   pip install streamlit
 
-Optional: Text-to-speech & voice commands (if your assistant feature is included)
-pip install pyttsx3 SpeechRecognition
+   Interactive charts
+   pip install plotly
 
-Excel file handling (if importing/exporting Excel data)
-pip install openpyxl xlrd
-
-Optional: Interactive charts
-pip install plotly
-
-Always good to upgrade pip first
-pip install --upgrade pip
+   Always good to upgrade pip first
+   pip install --upgrade pip
 
    ```
 4. Run the app:
