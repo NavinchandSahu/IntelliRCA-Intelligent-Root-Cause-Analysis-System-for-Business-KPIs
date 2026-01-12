@@ -46,7 +46,7 @@ IntelliRCA allows businesses to transform raw operational and financial data int
 1. Clone the repository:  
    ```bash
    git clone (https://github.com/NavinchandSahu/IntelliRCA-Intelligent-Root-Cause-Analysis-System-for-Business-KPIs)
-````
+   ````
 
 2. Navigate to the project folder:
 
