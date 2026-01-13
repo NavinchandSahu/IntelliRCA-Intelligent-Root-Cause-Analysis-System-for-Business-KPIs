@@ -53,25 +53,34 @@ IntelliRCA allows businesses to transform raw operational and financial data int
    ```bash
    cd intellirca
    ```
+
 3. Install dependencies:
 
-   ```bash
    Core data analysis & ML libraries
+   ```bash
    pip install pandas numpy matplotlib seaborn scikit-learn
-
+   ```
+   
    MySQL database connection
+   ```bash
    pip install mysql-connector-python
+   ```
 
    Web app / dashboard
+   ```bash
    pip install streamlit
+   ```
 
    Interactive charts
+   ```bash
    pip install plotly
+   ```
 
    Always good to upgrade pip first
+   ```bash
    pip install --upgrade pip
-
    ```
+
 4. Run the app:
 
    ```bash
